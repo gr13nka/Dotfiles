@@ -1,0 +1,26 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/username/" . "BatteryNotifier/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/username/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ 
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/username/BatteryNotifier/" (25735 26500 534779 710000) "./" "tkinter_battery_notifier.py" "short_bell.mp3" ".git/" "requirements.txt" "__pycache__/" "battery_notifier.py" "../" "file_example_MP3_700KB.mp3" "README.md" "alarm_file.json")
+
+ ("/home/username/" (25840 20003 688015 453000) ".icons/" "./" "test2.el" ".gitconfig" "dotfiles.org" ".git-credentials" ".gtkrc-2.0" "todo.org~" ".lesshst" ".test.un~" "test.el" ".xsessionrc" "test.org" ".gconf/" "Point testing/" "tags" ".profile" "ncurses/" "qmk_firmware/" "..vimrc.un~" ".ssh/" ".viminfo" "BatteryNotifier/" "org-roam/" ".npm/" "terminal" ".cache/" "PascalPrograms/" ".steampath" ".vimrc" ".steampid" ".gnome/" "todo.org" "compton-grayscale-reading-mode/" ".telegram-cli/" ".swp" ".xchat2/" ".gnome2/" "Programing/" ".xsession-errors.old" ".pam_environment" ".wget-hsts" ".local/" ".dbus/" "test.asm" "Documents/" ".vimrc~" ".bash_logout" "INSTALL" "sketchbook/" "Sync/" ".rustup/" ".conkeror.mozdev.org/" ".w3m/" ".var/" "../" ".test.swp" "grayscale.glsl" ".steam/" ".bash_history" ".python_history" "ObsidianBack/" ".mozilla/" "Downloads/" "Desktop/" "wg0.conf" ".bashrc" ".Xauthority" ".keynavrc" ".screenrc" ".xsession-errors" "pupa/" ".cargo/" ".dmrc" "media/" ".fonts/" ".xscreensaver" ".config/" ".java/" ".pki/" "test.org~" "test" "TestGodot/" ".android/" "go/" ".face" ".sudo_as_admin_successful" ".vim/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
