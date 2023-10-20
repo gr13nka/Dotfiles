@@ -2,7 +2,6 @@
 #+AUTHOR: gr13nka
 #+DESCRIPTION: Emacs config.
 #+STARTUP: everything
-#+OPTIONS: toc:2
 
 * TABLE OF CONTENTS                                                     :toc:
 - [[#important-programs-to-load-first][IMPORTANT PROGRAMS TO LOAD FIRST]]
@@ -505,7 +504,7 @@ You can use the bindings CTRL plus =/- for zooming in/out.  You can also use CTR
 #+end_src
 
 * WHICH-KEY
-#+begin_src emacs-lisp
+;#+begin_src emacs-lisp
   (use-package which-key
     :init
       (which-key-mode 1)
@@ -522,5 +521,5 @@ You can use the bindings CTRL plus =/- for zooming in/out.  You can also use CTR
 	  which-key-max-description-length 25
 	  which-key-allow-imprecise-window-fit t
 	  which-key-separator " → " ))
-#+end_src
+;#+end_src
 

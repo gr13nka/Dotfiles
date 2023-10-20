@@ -38,6 +38,7 @@ C-S-tab - switch between
  
 ;#+begin_src emacs-lisp
 (use-package general
+  :after evil
   :config
   (general-create-definer dt/leader-keys
     :states '(emacs)
@@ -333,7 +334,7 @@ Org-tempo is not a separate package but a module within org that can be enabled.
 | <l                      | '#+BEGIN_EXPORT latex' … '#+END_EXPORT' |
 | <q                      | '#+BEGIN_QUOTE' … '#+END_QUOTE'         |
 | <s                      | '#+BEGIN_SRC' … '#+END_SRC'             |
-| <el                     | '#+BEGIN_SRC emacs-lisp' … '#+END_SRC'  |
+| <e                      | '#+BEGIN_SRC emacs-lisp' … '#+END_SRC'  |
 | <v                      | '#+BEGIN_VERSE' … '#+END_VERSE'         |
 
 

@@ -1,0 +1,35 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("emacs"
+ (filename . "~/.config/emacs/config.org")
+ (front-context-string . "#+TITLE: Emacs C")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 25873 14165 874164 51000))
+("nvim"
+ (filename . "~/.config/nvim/init.lua")
+ (front-context-string . "--vars\nlocal key")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 25873 14126 893525 108000))
+("config"
+ (filename . "~/.config/")
+ (front-context-string . "alacritty\n  drwx")
+ (rear-context-string . "96 сен 11 17:46 ")
+ (position . 191)
+ (last-modified 25873 14113 272263 922000))
+("ivy"
+ (filename . "~/.config/emacs/config.org")
+ (front-context-string . "#+begin_src emac")
+ (rear-context-string . "mmands in M-x.\n;")
+ (position . 6890)
+ (last-modified 25873 14054 877519 810000))
+("ido"
+ (filename . "~/.config/emacs/config.org")
+ (front-context-string . "нтерактивный пои")
+ (rear-context-string . "...\n#+end_src\n\nИ")
+ (position . 3435)
+ (last-modified 25873 14026 622742 914000))
+)
