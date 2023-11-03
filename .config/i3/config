@@ -4,7 +4,7 @@ new_window pixel 1
 new_float normal
 
 set $lm HDMI-1
-set $rm eDP-1
+set $rm LVDS-1
 
 hide_edge_borders none
 font xft:URWGothic-Book 20
@@ -13,10 +13,9 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 # Window kill command
 bindsym $mod+Shift+q kill
-
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run
-bindsym $mod+Shift+m exec telegram-desktop
+bindsym $mod+d exec --no-startup-id rofi -show drun
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+n focus down
@@ -172,14 +171,10 @@ bindsym $mod+Ctrl+Left resize grow width 10 px or 10 ppt
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pactl info | grep 'Default Sink: ' | sed 's/^Default Sink: //') +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pactl info | grep 'Default Sink: ' | sed 's/^Default Sink: //') -5%
+bindsym XF86AudioMute exec pactl set-sink-volume $(pactl info | grep 'Default Sink: ' | sed 's/^Default Sink: //') -100%
 
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
-
-#bindsym XF86MonBrightnessUp exec --no-startup-id bash -c 'b=$(xrandr --verbose | grep -i brightness | head -n 1 | cut -d" " -f2) && b2=$(echo -e "import math\nf = lambda x: (1 - 1/(1+math.exp(4*x-2)))\nprint(\\\"%.2f\\\" % f(0.1+$b))" | python) && xrandr --output eDP-1 --brightness $b2'
-
-#bindsym XF86MonBrightnessDown exec --no-startup-id bash -c 'b=$(xrandr --verbose | grep -i brightness | head -n 1 | cut -d" " -f2) && b2=$(echo -e "import math\nf = lambda x: (1 - 1/(1+math.exp(4*x-2)))\nprint(\\\"%.2f\\\" % f(-0.1+$b))" | python) && xrandr --output eDP-1 --brightness $b2'
 
 bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl s +5%
@@ -192,4 +187,6 @@ exec_always compton --backend glx --glx-fshader-win "$(cat ~/.config/compton/gra
 exec_always setxkbmap -layout us,ru -option grp:alt_space_toggle &
 exec_always keynav &
 
-
+#polybar
+#bindsym $mod+Shift+Ctrl+p exec $HOME/.config/polybar/launch.sh  killall -q polybar
+exec_always polybar mybar &

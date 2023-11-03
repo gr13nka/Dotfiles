@@ -1,39 +1,35 @@
 scrolling:
-  # Specifying '0' will disable scrolling.
   history: 100000
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
   multiplier: 3
 
 font:
   normal:
     #family: Comic Shanns Mono Nerd Font
     #family: BigBlueTermPlus
-    family: FiraCode Nerd Font
-    #family: Comic Code Demo
+    #family: FiraCode Nerd Font
+    family: Comic Code Demo
     #family: Iosevka Mono
     #family: DeJavu Sans Mono 
     style: Regular
   bold:
     #family: Iosevka 
-    #family: Comic Code Demo
+    family: Comic Code Demo
     #family: DeJavu Sans Mono 
     style: Bold
   italic:
-    #family: Comic Code Demo
+    family: Comic Code Demo
     #family: DeJavu Sans Mono 
-    family: Iosevka 
+    #family: Iosevka 
     style: Italic
   bold_italic:
-    family: Iosevka 
-    #family: Comic Code Demo
+    #family: Iosevka 
+    family: Comic Code Demo
     #family: DeJavu Sans Mono 
     style: Bold Italic
-  size: 16
+  size: 14
     #use_thin_strokes: true
 # If `true`, bold text is drawn using the bright color variants.
 # Base16 Default Dark 256 - alacritty color config
-# Chris Kempson (http://chriskempson.com)
 colors:
   # Default colors
   primary:
@@ -75,27 +71,20 @@ bell:
   duration: 300
   color: '0xffffff'
 window.opacity: 0.19
+
 selection:
-  # This string contains all characters that are used as separators for
-  # "semantic words" in Alacritty.
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  # When set to `true`, selected text will be copied to the primary clipboard.
+  # When `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-# Allow terminal applications to change Alacritty’s window title.
+
 cursor:
   style: Block
   unfocused_hollow: true
-# Live config reload (changes require restart)
 live_config_reload: true
-# Tell Alacritty that we’re using fish here
 shell:
-  program: /usr/bin/fish
+  program: /bin/sh
   args:
-  - -l
-    #- -c
-    # - "tmux attach || tmux"
-    
-# Enable clickable URLs
+    - -l
 mouse:
   hint:
     launcher:
