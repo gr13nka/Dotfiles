@@ -1,3 +1,6 @@
+#   qute://help/configuring.html
+#   qute://help/settings.html
+
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
 
@@ -8,9 +11,6 @@ config.load_autoconfig(False)
 # set font sizes and the `zoom.default` setting.
 # Type: Bool
 c.qt.highdpi = True
-
-#Enable dark mode
-config.set("colors.webpage.darkmode.enabled", True)
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -191,6 +191,18 @@ c.tabs.focus_stack_size = 10
 # Type: Perc
 c.zoom.default = '175%'
 
+# Render all web contents using a dark theme. Example configurations
+# from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
+# inversion": Set   `colors.webpage.darkmode.algorithm` accordingly.  -
+# "With selective image inversion": Set
+# `colors.webpage.darkmode.policy.images` to `smart`.  - "With selective
+# inversion of non-image elements": Set
+# `colors.webpage.darkmode.threshold.text` to 150 and
+# `colors.webpage.darkmode.threshold.background` to 205.  - "With
+# selective inversion of everything": Combines the two variants   above.
+# Type: Bool
+c.colors.webpage.darkmode.enabled = True
+
 # Default font families to use. Whenever "default_family" is used in a
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
@@ -217,26 +229,18 @@ c.fonts.default_size = '18pt'
 # key. Note that when a key is bound (via `bindings.default` or
 # `bindings.commands`), the mapping is ignored.
 # Type: Dict
-
 c.bindings.key_mappings = {'<Ctrl+6>': '<Ctrl+^>', '<Ctrl+Enter>': '<Ctrl+Return>', '<Ctrl+i>': '<Tab>', '<Ctrl+j>': '<Return>', '<Ctrl+m>': '<Return>', '<Ctrl+[>': '<Escape>', '<Enter>': '<Return>', '<Shift+Enter>': '<Return>', '<Shift+Return>': '<Return>'}
 
+# Bindings for normal mode
+config.bind('<Shift+Р>', 'back')
+config.bind('<Shift+Щ>', 'forward')
+config.bind('<А>', 'hint')
+config.bind('<В>', 'tab-close')
+config.bind('<Щ>', 'set-cmd-text -s open -t')
+config.bind('e', 'tab-next')
+config.bind('n', 'tab-prev')
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
-
-#tabs navigation
-config.bind('n', 'tab-prev')
-config.bind('e', 'tab-next')
-
-#ru buttons
-config.bind('щ', 'set-cmd-text -s open -t')
-config.bind('в', 'tab-close')
-config.bind('а', 'hint')
-
-config.bind('Р', 'back')
-config.bind('Щ', 'forward')
-
-
-
-
+config.bind('M', 'hint links spawn mpv {hint-url}')

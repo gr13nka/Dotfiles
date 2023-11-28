@@ -11,6 +11,8 @@ NC='\033[0m'
 cd $(dirname $(readlink -f $0))
 cd ..
 
+git add .
+
 echo -e "${BLUE}Stashing existing changes...${NC}"
 stash_result=$(git stash push -m "sync-dotfiles: Before syncing dotfiles")
 needs_pop=1
