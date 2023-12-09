@@ -12,7 +12,7 @@ hide_edge_borders none
 font xft:URWGothic-Book 20
 floating_modifier $mod
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 # Window kill command
 bindsym $mod+Shift+q kill
 # start program launcher
@@ -67,90 +67,77 @@ workspace 3 output $lm
 workspace 4 output $lm
 workspace 5 output $lm
 workspace 6 output $lm
+
 workspace 7 output $rm
 workspace 8 output $rm
 workspace 9 output $rm
-workspace 10 output $lm
-workspace 11 output $rm
-workspace 12 output $rm
-workspace 13 output $rm
-workspace 14 output $rm
-workspace 15 output $rm
-workspace 16 output $rm
-workspace 17 output $rm
-workspace 18 output $rm
-workspace 19 output $rm
-workspace 20 output $rm
-# workspaces
+
 set $ws1 1
 set $ws2 2
 set $ws3 3
 set $ws4 4
 set $ws5 5
 set $ws6 6
+
 set $ws7 7
 set $ws8 8
 set $ws9 9
-set $ws10 10
-set $ws11 11
-set $ws12 12
-set $ws13 13
-set $ws14 14
-set $ws15 15
-set $ws16 16
-set $ws17 17
-set $ws18 18
-set $ws19 19
-set $ws20 20
+
 # Assign workspaces
-assign [class="qutebrowser"] $ws10
+assign [class="qutebrowser"] $ws1
 assign [class="obsidian"] $ws3
 
 # switch to workspace
-bindsym $mod+1 workspace $ws11
-bindsym $mod+2 workspace $ws12
-bindsym $mod+3 workspace $ws13
-bindsym $mod+4 workspace $ws14
-bindsym $mod+5 workspace $ws15
-bindsym $mod+6 workspace $ws16
-bindsym $mod+7 workspace $ws17
-bindsym $mod+8 workspace $ws18
-bindsym $mod+9 workspace $ws19
-bindsym $mod+0 workspace $ws20
-
-bindsym $mod+w workspace $ws10
+#
+bindsym $mod+w workspace $ws1
 bindsym $mod+f workspace $ws2
 bindsym $mod+p workspace $ws3
 bindsym $mod+r workspace $ws4
 bindsym $mod+s workspace $ws5
 bindsym $mod+t workspace $ws6
-bindsym $mod+x workspace $ws7
-bindsym $mod+c workspace $ws8
-bindsym $mod+v workspace $ws9
+
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+bindsym $mod+1 workspace $ws7
+bindsym $mod+2 workspace $ws8
+bindsym $mod+3 workspace $ws9
+
+
+#workspaces autolayout
+set $i3l vstack to workspace $ws1
+set $i3l vstack to workspace $ws2
+set $i3l vstack to workspace $ws3
+set $i3l vstack to workspace $ws4
+set $i3l vstack to workspace $ws5
+set $i3l vstack to workspace $ws6
+set $i3l vstack to workspace $ws7
+set $i3l vstack to workspace $ws8
+set $i3l vstack to workspace $ws9
 
 # Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws11
-bindsym $mod+Ctrl+2 move container to workspace $ws12
-bindsym $mod+Ctrl+3 move container to workspace $ws13
-bindsym $mod+Ctrl+4 move container to workspace $ws14
-bindsym $mod+Ctrl+5 move container to workspace $ws15
-bindsym $mod+Ctrl+6 move container to workspace $ws16
-bindsym $mod+Ctrl+7 move container to workspace $ws17
-bindsym $mod+Ctrl+8 move container to workspace $ws18
-bindsym $mod+Ctrl+9 move container to workspace $ws19
-bindsym $mod+Ctrl+0 move container to workspace $ws20
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
-bindsym $mod+Shift+1 move container to workspace $ws10; workspace $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws17; workspace $ws17
-bindsym $mod+Shift+8 move container to workspace $ws18; workspace $ws18
-bindsym $mod+Shift+9 move container to workspace $ws19; workspace $ws19
-bindsym $mod+Shift+0 move container to workspace $ws20; workspace $ws20
+
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 
 # switch to workspace with urgent window automatically
@@ -206,3 +193,4 @@ exec_always polybar mybar &
 exec_always syncthing &
 exec_always flatpak run md.obsidian.Obsidian 
 exec qutebrowser
+exec i3-layouts 
