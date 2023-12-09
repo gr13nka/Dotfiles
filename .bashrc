@@ -17,6 +17,6 @@ alias l='ls'
 alias la='ls -a'
 alias p='cd ~/Progs/PycharmProjects/CDW/'
 alias d='cd ~/Downloads'
-alias PyFix='./Progs/Scripts/PycharmFix.sh'
+alias dot='cd ~/Dotfiles/.config'
 
 #source ~/.bash_profile

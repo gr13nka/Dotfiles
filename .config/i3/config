@@ -190,7 +190,10 @@ exec_always keynav &
 #polybar
 #bindsym $mod+Shift+Ctrl+p exec $HOME/.config/polybar/launch.sh  killall -q polybar
 exec_always polybar mybar &
-exec_always syncthing &
+exec syncthing &
 exec_always flatpak run md.obsidian.Obsidian 
 exec qutebrowser
+#pip install --user i3-layouts && guix install xdotool && install i3-wm 4.22>=
 exec i3-layouts 
+
+exec sudo openvpn --config /home/username/Dotfiles/.config/agrankov.ovpn &
