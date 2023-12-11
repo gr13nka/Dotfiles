@@ -47,8 +47,7 @@ workspace_auto_back_and_forth yes
 bindsym $mod+Shift+t workspace back_and_forth
 bindsym $mod+Ctrl+t move container to workspace back_and_forth; workspace back_and_forth
 
-# split orientation
-bindsym $mod+q split toggle
+bindsym $mod+q exec ~/Dotfiles/.config/i3/change_config.sh 
 # toggle fullscreen mode for the focused container
 bindsym $mod+Shift+f fullscreen toggle
 
@@ -86,7 +85,7 @@ set $ws9 9
 # Assign workspaces
 assign [class="qutebrowser"] $ws1
 assign [class="obsidian"] $ws3
-
+bindsym $mod+z i3-msg '[workspace="1"]' move workspace to output left
 # switch to workspace
 #
 bindsym $mod+w workspace $ws1
@@ -191,9 +190,7 @@ exec_always keynav &
 #bindsym $mod+Shift+Ctrl+p exec $HOME/.config/polybar/launch.sh  killall -q polybar
 exec_always polybar mybar &
 exec syncthing &
-exec_always flatpak run md.obsidian.Obsidian 
+exec Obsidian 
 exec qutebrowser
 #pip install --user i3-layouts && guix install xdotool && install i3-wm 4.22>=
 exec i3-layouts 
-
-exec sudo openvpn --config /home/username/Dotfiles/.config/agrankov.ovpn &

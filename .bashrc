@@ -18,5 +18,6 @@ alias la='ls -a'
 alias p='cd ~/Progs/PycharmProjects/CDW/'
 alias d='cd ~/Downloads'
 alias dot='cd ~/Dotfiles/.config'
+alias ovpn='sudo openvpn --config /home/username/Dotfiles/.config/agrankov.ovpn &'
 
 #source ~/.bash_profile
