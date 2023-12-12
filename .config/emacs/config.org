@@ -28,10 +28,9 @@ C-S-tab - switch between
 ;; Download Evil
 (unless (package-installed-p 'evil)
   (package-install 'evil))
-
 ;; Enable Evil
 (require 'evil)
-(evil-mode 1) 
+(evil-mode 0) 
 #+end_src
 
 ** General Keybindings
@@ -234,20 +233,21 @@ https://www.emacswiki.org/emacs/buffer-move.el
 #+end_src
 ** Disable Menubar, Toolbars and Scrollbars
 #+begin_src emacs-lisp
-;; Inhibit startup/splash screen
-(setq inhibit-splash-screen   t)
-(setq ingibit-startup-message t) ;; no hello screen
-;; Disable GUI components
-(tooltip-mode -1)
-(menu-bar-mode -1) 
-(tool-bar-mode  -1)
-(scroll-bar-mode -1) 
-(blink-cursor-mode nil) 
+  ;; Inhibit startup/splash screen
+  (setq inhibit-splash-screen   t)
+  (setq initial-buffer-choice nil)
+  (setq ingibit-startup-message t) ;; no hello screen
+  ;; Disable GUI components
+  (tooltip-mode -1)
+  (menu-bar-mode -1) 
+  (tool-bar-mode  -1)
+  (scroll-bar-mode -1) 
+  (blink-cursor-mode nil) 
 
-(setq use-dialog-box nil)
-(setq redisplay-dont-pause t)  ;; better buffer rendering 
-(setq ring-bell-function 'ignore) ;; disable bell
-;;(setq visible-bell t) ;; disable bell
+  (setq use-dialog-box nil)
+  (setq redisplay-dont-pause t)  ;; better buffer rendering 
+  (setq ring-bell-function 'ignore) ;; disable bell
+  ;;(setq visible-bell t) ;; disable bell
 #+end_src
 ** Recent files
 #+begin_src emacs-lisp

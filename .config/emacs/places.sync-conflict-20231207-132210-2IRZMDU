@@ -1,9 +1,0 @@
-;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/username/.config/emacs/config.org" . 10721)
- ("/home/username/.config/"
-  (dired-filename . "/home/username/.config/emacs"))
- ("/home/username/.config/emacs/"
-  (dired-filename . "/home/username/.config/emacs/config.org"))
- ("/home/username/.config/emacs/init.el" . 77)
- ("/home/username/.config/emacs/config.el" . 611)
- ("/usr/share/emacs/29.1/lisp/font-lock.el.gz" . 96192))

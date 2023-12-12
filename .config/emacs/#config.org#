@@ -3,6 +3,7 @@
 #+DESCRIPTION: Emacs config.
 
 
+  ;:init
 * Tab bar mode(workspaces)
 pr - prefix C-x t
 pr 2 - new tab
@@ -28,17 +29,15 @@ C-S-tab - switch between
 ;; Download Evil
 (unless (package-installed-p 'evil)
   (package-install 'evil))
-
 ;; Enable Evil
 (require 'evil)
-(evil-mode 1) 
+(evil-mode 0) 
 #+end_src
 
 ** General Keybindings
  
 ;#+begin_src emacs-lisp
 (use-package general
-  :after evil
   :config
   (general-create-definer dt/leader-keys
     :states '(emacs)
@@ -186,7 +185,6 @@ This is an icon set that can be used with dashboard, dired, ibuffer and other Em
 ;(use-package evil-collection
  ; :ensure t
   ;:after evil
-  ;:init
   ;(evil-collection-init))
 #+end_src
 
@@ -235,20 +233,21 @@ https://www.emacswiki.org/emacs/buffer-move.el
 #+end_src
 ** Disable Menubar, Toolbars and Scrollbars
 #+begin_src emacs-lisp
-;; Inhibit startup/splash screen
-(setq inhibit-splash-screen   t)
-(setq ingibit-startup-message t) ;; no hello screen
-;; Disable GUI components
-(tooltip-mode -1)
-(menu-bar-mode -1) 
-(tool-bar-mode  -1)
-(scroll-bar-mode -1) 
-(blink-cursor-mode nil) 
+  ;; Inhibit startup/splash screen
+  (setq inhibit-splash-screen   t)
+  (setq initial-buffer-choice nil)
+  (setq ingibit-startup-message t) ;; no hello screen
+  ;; Disable GUI components
+  (tooltip-mode -1)
+  (menu-bar-mode -1) 
+  (tool-bar-mode  -1)
+  (scroll-bar-mode -1) 
+  (blink-cursor-mode nil) 
 
-(setq use-dialog-box nil)
-(setq redisplay-dont-pause t)  ;; better buffer rendering 
-(setq ring-bell-function 'ignore) ;; disable bell
-;;(setq visible-bell t) ;; disable bell
+  (setq use-dialog-box nil)
+  (setq redisplay-dont-pause t)  ;; better buffer rendering 
+  (setq ring-bell-function 'ignore) ;; disable bell
+  ;;(setq visible-bell t) ;; disable bell
 #+end_src
 ** Recent files
 #+begin_src emacs-lisp
@@ -334,7 +333,7 @@ Org-tempo is not a separate package but a module within org that can be enabled.
 | <l                      | '#+BEGIN_EXPORT latex' … '#+END_EXPORT' |
 | <q                      | '#+BEGIN_QUOTE' … '#+END_QUOTE'         |
 | <s                      | '#+BEGIN_SRC' … '#+END_SRC'             |
-| <e                      | '#+BEGIN_SRC emacs-lisp' … '#+END_SRC'  |
+| <el                     | '#+BEGIN_SRC emacs-lisp' … '#+END_SRC'  |
 | <v                      | '#+BEGIN_VERSE' … '#+END_VERSE'         |
 
 

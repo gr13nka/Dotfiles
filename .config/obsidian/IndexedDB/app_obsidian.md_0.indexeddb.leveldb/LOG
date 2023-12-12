@@ -1,3 +1,15 @@
 2023/12/11-12:40:23.031 1387 Reusing MANIFEST /home/username/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
 2023/12/11-12:40:23.032 1387 Recovering log #3
 2023/12/11-12:40:23.054 1387 Reusing old log /home/username/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000003.log 
+2023/12/11-14:13:04.588 1386 Level-0 table #5: started
+2023/12/11-14:13:04.620 1386 Level-0 table #5: 1139593 bytes OK
+2023/12/11-14:13:04.629 1386 Delete type=0 #3
+2023/12/11-14:51:22.643 1386 Level-0 table #7: started
+2023/12/11-14:51:22.672 1386 Level-0 table #7: 953727 bytes OK
+2023/12/11-14:51:22.681 1386 Delete type=0 #4
+2023/12/11-14:51:46.314 1386 Compacting 1@1 + 1@2 files
+2023/12/11-14:51:46.350 1386 Generated table #8@1: 958 keys, 227242 bytes
+2023/12/11-14:51:46.350 1386 Compacted 1@1 + 1@2 files => 227242 bytes
+2023/12/11-14:51:46.358 1386 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/12/11-14:51:46.358 1386 Delete type=2 #5
+2023/12/11-14:51:46.358 1386 Delete type=2 #7
