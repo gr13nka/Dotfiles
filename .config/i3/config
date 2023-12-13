@@ -205,3 +205,5 @@ exec flatpak run md.obsidian.Obsidian
 exec qutebrowser
 #pip install --user i3-layouts && guix install xdotool && install i3-wm 4.22>=
 exec i3-layouts 
+#disable latop screen
+exec xrandr --output LVDS-1 --off

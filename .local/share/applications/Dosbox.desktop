@@ -6,7 +6,7 @@ Type=Application
 # The version of the desktop entry specification to which this file complies
 
 # The name of the application
-Name=Discord
+Name=Dosbox
 # The executable of the application, possibly with arguments.
 Exec=dosbox
 
