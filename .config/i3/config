@@ -5,6 +5,16 @@ set $mod Mod4
 new_window pixel 1
 new_float normal
 
+# class                 border  backgr. text    indicator child_border
+client.unfocused        #000000 #000000 #000000 #000000   #000000
+                                    #floating win text color
+client.focused_inactive #ffffff #ffffff #000000 #ffffff   #ffffff 
+client.focused          #ffffff #ffffff #000000 #ffffff   #ffffff 
+client.urgent           #2f343a #900000 #000000 #900000   #900000
+client.placeholder      #000000 #0c0c0c #000000 #000000   #0c0c0c
+
+client.background       #ffffff
+
 set $lm VGA-1
 #set $rm LVDS-1
 
@@ -12,7 +22,7 @@ hide_edge_borders none
 font xft:URWGothic-Book 20
 floating_modifier $mod
 
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 # Window kill command
 bindsym $mod+Shift+q kill
 # start program launcher
@@ -190,7 +200,8 @@ exec_always keynav &
 #bindsym $mod+Shift+Ctrl+p exec $HOME/.config/polybar/launch.sh  killall -q polybar
 exec_always polybar mybar &
 exec syncthing &
-exec Obsidian 
+#exec Obsidian 
+exec flatpak run md.obsidian.Obsidian
 exec qutebrowser
 #pip install --user i3-layouts && guix install xdotool && install i3-wm 4.22>=
 exec i3-layouts 

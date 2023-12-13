@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("emacs"
+(("Deeplearning"
+ (filename . "~/ObsidianBack/Org/Python/DeepLearning.org")
+ (front-context-string . "* Week 2\n** Nota")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 25977 38705 175501 468000))
+("emacs"
  (filename . "~/.config/emacs/config.org")
  (front-context-string . "#+TITLE: Emacs C")
  (rear-context-string)

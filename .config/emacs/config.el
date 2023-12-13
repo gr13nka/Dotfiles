@@ -14,10 +14,9 @@
 ;; Download Evil
 (unless (package-installed-p 'evil)
   (package-install 'evil))
-
 ;; Enable Evil
 (require 'evil)
-(evil-mode 1)
+(evil-mode 0)
 
 
 
@@ -82,6 +81,7 @@
 
 ;; Inhibit startup/splash screen
 (setq inhibit-splash-screen   t)
+(setq initial-buffer-choice nil)
 (setq ingibit-startup-message t) ;; no hello screen
 ;; Disable GUI components
 (tooltip-mode -1)
