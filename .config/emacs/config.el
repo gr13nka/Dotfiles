@@ -18,7 +18,7 @@
 (require 'evil)
 (evil-mode 0)
 
-
+(global-visual-line-mode t)
 
 (setq global-auto-revert-non-file-buffers t)
 

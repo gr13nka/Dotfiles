@@ -1,7 +1,13 @@
-(use-modules (gnu)(nongnu packages linux)(gnu services docker )(gnu services virtualization))
-(use-service-modules vpn cups desktop networking ssh xorg)
-(use-package-modules vpn)
 
+(use-modules (gnu)(guix)(gnu services mcron)(nongnu packages linux)(gnu services docker)(gnu services virtualization))
+(use-service-modules vpn cups desktop networking ssh xorg)
+(use-package-modules vpn base)
+
+(define garbage-collector-job
+  ;; Collect garbage 5 minutes after midnight every day.
+  ;; The job's action is a shell command.
+  #~(job "5 0 * * *"            ;Vixie cron syntax
+         "guix gc -F 1G"))
 
 (operating-system
  (kernel linux)
@@ -21,8 +27,8 @@
 
   (packages (append (list (specification->package "i3-wm")
                           (specification->package "i3status")
-                          (specification->package "dmenu")
-                          (specification->package "st")
+                          (specification->package "rofi")
+                          (specification->package "alacritty")
                           (specification->package "emacs")
                           (specification->package "emacs-exwm")
                           (specification->package
@@ -33,45 +39,38 @@
 
   (services (append (list 
 		     (service gnome-desktop-service-type)
-			 (service bluetooth-service-type)
-
-			 (service docker-service-type)
+		     (service bluetooth-service-type)
+		     (service docker-service-type)
+			 (simple-service 'my-cron-jobs
+                                   mcron-service-type
+                                   (list garbage-collector-job))
 
 		     (set-xorg-configuration
-                       (xorg-configuration (keyboard-layout keyboard-layout))) 
+                      (xorg-configuration (keyboard-layout keyboard-layout))) 
 
-		    (service libvirt-service-type
+		     (service libvirt-service-type
 		              (libvirt-configuration
 				        (unix-sock-group "libvirt")
 					    (tls-port "16555")))
 
 		     (service wireguard-service-type
-				(wireguard-configuration
-	                 (port 51828)
-	                 (addresses '("10.0.0.14/32"))
-			         (dns '("8.8.8.8"))
-			 (peers
-			  (list
-			   (wireguard-peer
-			    (name "server")
-			    (endpoint "159.223.237.128:51820")
-		    	    (public-key "CQ4UnP5p43gc3JT3gD0ShiwSS08LIOjoi/RWH43+Jkw=")
-		            (allowed-ips '("0.0.0.0/0")))))
-		         (private-key "/srv/wg/GuixX220.key"))))
-
-		      %desktop-services))
-
-  ;;     		     (guix-service-type config =>
-  ;; 			(guix-configuration
-  ;;                         (inherit config)
-  ;;                         (substitute-urls
-  ;;                           (append (list "https://bordeaux.guix.gnu.org")
-  ;;                           %default-substitute-urls))))
-
+			  (wireguard-configuration
+			   (port 51828)
+			   (addresses '("10.0.0.14/32"))
+			   (dns '("8.8.8.8"))
+			   (peers(list
+			 	  (wireguard-peer
+			    	   (name "server")
+			 	   (endpoint "159.223.237.128:51820")
+		    		   (public-key "CQ4UnP5p43gc3JT3gD0ShiwSS08LIOjoi/RWH43+Jkw=")
+				   (allowed-ips '("0.0.0.0/0")))))
+		           (private-key "/srv/wg/GuixX220.key"))))
+		             %desktop-services))
 
   (bootloader (bootloader-configuration
                 (bootloader grub-bootloader)
                 (targets (list "/dev/sdb"))
+		(timeout 0)
                 (keyboard-layout keyboard-layout)))
   
   (mapped-devices (list (mapped-device
@@ -84,4 +83,3 @@
                          (device "/dev/mapper/cryptroot")
                          (type "ext4")
                          (dependencies mapped-devices)) %base-file-systems)))
-
