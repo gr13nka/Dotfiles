@@ -2,25 +2,43 @@
 
 set $mod Mod4
 
+
+#Window borders 
 new_window pixel 1
-new_float normal
 
 # class                 border  backgr. text    indicator child_border
 client.unfocused        #000000 #000000 #000000 #000000   #000000
-                                    #floating win text color
-client.focused_inactive #ffffff #ffffff #000000 #ffffff   #ffffff 
 client.focused          #ffffff #ffffff #000000 #ffffff   #ffffff 
-client.urgent           #2f343a #900000 #000000 #900000   #900000
-client.placeholder      #000000 #0c0c0c #000000 #000000   #0c0c0c
-
-client.background       #ffffff
-
-set $lm VGA-1
-#set $rm LVDS-1
 
 hide_edge_borders none
 font xft:URWGothic-Book 20
+smart_borders on
+default_floating_border pixel 1
+
+#Monitors
+set $lm VGA-1
+#set $rm LVDS-1
+
+#Floating
 floating_modifier $mod
+new_float normal
+
+#win + Right click
+#bindsym $mod+button3 floating toggle
+
+
+
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# Show the sup-mail scratchpad window, if any.
+#bindsym mod4+s [title="^Sup ::"] scratchpad show
+
+
 
 bindsym $mod+Return exec alacritty
 # Window kill command
@@ -188,22 +206,21 @@ bindsym $mod+Shift+Ctrl+e exec sudo herd enable wireguard-wg0
 bindsym $mod+Shift+Ctrl+d exec sudo herd stop wireguard-wg0
 
 
-exec_always --no-startup-id i3-auto-layout
+
 exec_always --no-startup-id i3battery --wt=80,20,10
-#exec_always --no-startup-id /home/username/.config/polybar/launch.sh --forest
-#exec_always --no-startup-id nixGL picom --config ~/.config/picom/picom.conf --glx-no-rebind-pixmap --use-nodamage --xrender-sync-fence --backend glx --window-shader-fd ~/.config/picom/grayscale.glsl
-exec_always compton --backend glx --glx-fshader-win "$(cat ~/.config/compton/grayscale.glsl)"
+#exec_always compton --backend glx --glx-fshader-win "$(cat ~/.config/compton/grayscale.glsl)"
 exec_always setxkbmap -layout us,ru -option grp:alt_space_toggle &
 exec_always keynav &
 
 #polybar
 #bindsym $mod+Shift+Ctrl+p exec $HOME/.config/polybar/launch.sh  killall -q polybar
 exec_always polybar mybar &
-exec syncthing &
+exec_always syncthing &
+
 #exec Obsidian 
 exec flatpak run md.obsidian.Obsidian
 exec qutebrowser
 #pip install --user i3-layouts && guix install xdotool && install i3-wm 4.22>=
-exec i3-layouts 
+exec_always i3-layouts 
 #disable latop screen
-exec xrandr --output LVDS-1 --off
+#exec xrandr --output LVDS-1 --off
