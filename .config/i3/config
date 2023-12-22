@@ -224,3 +224,4 @@ exec qutebrowser
 exec_always i3-layouts 
 #disable latop screen
 #exec xrandr --output LVDS-1 --off
+exec_always xrandr --output VGA-1 --auto --left-of LVDS-1
