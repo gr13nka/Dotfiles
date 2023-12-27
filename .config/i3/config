@@ -75,7 +75,7 @@ workspace_auto_back_and_forth yes
 bindsym $mod+Shift+t workspace back_and_forth
 bindsym $mod+Ctrl+t move container to workspace back_and_forth; workspace back_and_forth
 
-bindsym $mod+q exec ~/Dotfiles/.config/i3/change_config.sh 
+#bindsym $mod+q exec ~/Dotfiles/.config/i3/change_config.sh 
 # toggle fullscreen mode for the focused container
 bindsym $mod+Shift+f fullscreen toggle
 

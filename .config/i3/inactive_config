@@ -82,7 +82,7 @@ set $ws9 9
 assign [class="qutebrowser"] $ws1
 assign [class="obsidian"] $ws3
 
-bindsym $mod+q exec ~/Dotfiles/.config/i3/change_config.sh
+#bindsym $mod+q exec ~/Dotfiles/.config/i3/change_config.sh
 # switch to workspace
 #
 bindsym $mod+1 workspace $ws1
