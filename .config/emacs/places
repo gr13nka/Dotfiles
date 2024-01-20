@@ -1,12 +1,12 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/username/.config/"
-  (dired-filename . "/home/username/.config/guix"))
- ("/home/username/.config/guix/"
-  (dired-filename . "/home/username/.config/guix/system.scm"))
- ("/home/username/ObsidianBack/Org/Python/DeepLearning.org" . 13095)
- ("/home/username/Dotfiles/.config/guix/system.scm" . 918)
- ("/home/username/Dotfiles/.config/emacs/config.org" . 2039)
+(("/home/username/ObsidianBack/Org/Python/DeepLearning.org" . 13582)
+ ("/home/username/.config/"
+  (dired-filename . "/home/username/.config/emacs"))
  ("/home/username/.config/emacs/"
   (dired-filename . "/home/username/.config/emacs/config.org"))
+ ("/home/username/Dotfiles/.config/emacs/config.org" . 918)
+ ("/home/username/.config/guix/"
+  (dired-filename . "/home/username/.config/guix/system.scm"))
+ ("/home/username/Dotfiles/.config/guix/system.scm" . 918)
  ("/home/username/.config/emacs/init.el" . 77)
  ("/home/username/.config/emacs/config.el" . 611))

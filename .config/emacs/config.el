@@ -18,6 +18,8 @@
 (require 'evil)
 (evil-mode 0)
 
+(auto-save-visited-mode t)
+
 (global-visual-line-mode t)
 
 (setq global-auto-revert-non-file-buffers t)

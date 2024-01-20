@@ -25,4 +25,7 @@ alias la='exa -alh'
 alias tree='exa  --tree'
 alias ovpn='sudo openvpn --config /home/username/Dotfiles/.config/agrankov.ovpn &'
 
+alias wireguard_on='sudo herd start wireguard-wg0'
+alias wireguard_off='sudo herd stop wireguard-wg0'
+
 #source ~/.bash_profile

@@ -34,6 +34,10 @@ C-S-tab - switch between
 #+end_src
 
 * Useful modes
+** autosaving 
+#+begin_src emacs-lisp
+(auto-save-visited-mode t)
+#+end_src
 ** wrap lines as usual 
 #+begin_src emacs-lisp
 (global-visual-line-mode t)

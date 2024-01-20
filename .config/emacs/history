@@ -8,5 +8,5 @@
 (setq minibuffer-history '("Deeplearning" "modus-themes-mode-line"))
 (setq evil-ex-history '("w" "wq" "w" "wq" "w" "q"))
 (setq file-name-history '("~/ObsidianBack/Org/Python/DeepLearning.org" "~/Dotfiles/.config/emacs/config.org" "~/Dotfiles/.config/emacs/#config.org#" "~/Dotfiles/.config/emacs/config.org" "~/.config/emacs/init.el" "~/.config/emacs/config.el" "~/.config/emacs/config.org" "~/.config/emacs/bookmarks" "/usr/share/emacs/29.1/lisp/font-lock.el.gz"))
-(setq extended-command-history '("mark-page" "yank" "mark-page" "evil-mode" "visual-line-mode" "toggle-truncate-lines" "visual-line-mode" "toggle-truncate-lines" "evil-mode" "tetris" "package-refresh-contents" "icomplete-mode" "eval-region" "eval-expression" "eval-defun" "eval-buffer" "describe-variable" "eval-region" "customize"))
+(setq extended-command-history '("auto-save-visited-mode" "auto-save-mode" "mark-page" "yank" "mark-page" "evil-mode" "visual-line-mode" "toggle-truncate-lines" "visual-line-mode" "toggle-truncate-lines" "evil-mode" "tetris" "package-refresh-contents" "icomplete-mode" "eval-region" "eval-expression" "eval-defun" "eval-buffer" "describe-variable" "eval-region" "customize"))
 (setq evil-jumps-history 'nil)
