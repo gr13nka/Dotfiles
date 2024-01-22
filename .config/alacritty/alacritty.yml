@@ -1,3 +1,6 @@
+#import = [
+  #"~/.config/alacritty/themes/themes/alacritty_0_12.toml"
+  #]
 scrolling:
   history: 100000
   multiplier: 3
@@ -82,7 +85,7 @@ cursor:
   unfocused_hollow: true
 live_config_reload: true
 shell:
-  program: /home/username/.guix-profile/bin/bash
+  program: /home/username/.guix-profile/bin/fish
   args:
     - -l
 mouse:
