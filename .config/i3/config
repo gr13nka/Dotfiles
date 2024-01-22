@@ -223,5 +223,5 @@ exec qutebrowser
 #pip install --user i3-layouts && guix install xdotool && install i3-wm 4.22>=
 exec_always i3-layouts 
 #disable latop screen
-#exec xrandr --output LVDS-1 --off
-exec_always xrandr --output VGA-1 --auto --left-of LVDS-1
+exec_always xrandr --output LVDS-1 --off
+#exec_always xrandr --output VGA-1 --auto --left-of LVDS-1
