@@ -1,0 +1,120 @@
+import = [
+    "~/Dotfiles/.config/alacritty/themes/themes/dracula.toml"
+]
+
+live_config_reload = true
+"window.opacity" = 0.19
+
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 300
+
+#[colors.cursor]
+#cursor = "0xa7adba"
+#text = "0xa7adba"
+
+#[colors.normal]
+#black = "0x181818"
+#blue = "0x9fc5e8"
+#cyan = "0x9fc5e8"
+#green = "0x8b8f95"
+#magenta = "0xba8baf"
+#red = "0xab4642"
+#white = "0xc0c5ce"
+#yellow = "0xf7ca88"
+
+#[colors.primary]
+#background = "0x333d41"
+#foreground = "0x8b8f95"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[font]
+size = 21
+
+[font.bold]
+family = "Comic Code Demo"
+style = "Bold"
+
+[font.bold_italic]
+family = "Comic Code Demo"
+style = "Bold Italic"
+
+[font.italic]
+family = "Comic Code Demo"
+style = "Italic"
+
+[font.normal]
+family = "Comic Code Demo"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "º"
+key = "Key0"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "¡"
+key = "Key1"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "€"
+key = "Key2"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "#"
+key = "Key3"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "¢"
+key = "Key4"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "∞"
+key = "Key5"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "§"
+key = "Key6"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "¶"
+key = "Key7"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "•"
+key = "Key8"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "ª"
+key = "Key9"
+mods = "Alt"
+
+[mouse.hint]
+modifiers = "Command"
+
+[mouse.hint.launcher]
+program = "open"
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[shell]
+args = ["-l"]
+program = "/home/username/.guix-profile/bin/fish"

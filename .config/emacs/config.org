@@ -2,7 +2,69 @@
 #+AUTHOR: gr13nka
 #+DESCRIPTION: Emacs config.
 
+* Basic movement
+C-u num to repeat something num times
+C-f move one character
+C-b back
+M-f One Word
+M-b back
 
+C-a begining of line
+C-e end of line
+M-a begining of sentence
+M-e end 
+C-up move by paragraphs
+C-down
+
+scrolling
+M-v up
+C-v down
+C-M-v scrolls the other window opened
+
+M-> end of file
+M-< begining
+they leave marks where they were used so u can jump back with C-u C-SPC
+
+C-M-f move by s-expression
+C-M-b back
+
+C-M-d move into a list (down)
+C-M-u up
+
+C-s search
+C-s C-s repeat last search
+C-r reverse the search direction
+
+M-m first non blank char
+
+C-g to cancel anything 
+
+M-x replace-string
+
+to generate tags for func jumping
+ctags -e -R .
+M-. to jump down to func
+M-, to come back
+C-M-. to find all classes
+
+C-x C-f find or create file
+C-x C-left(right) to switch between buffers
+C-x b to switch to buffer TAB for completion
+C-x C-b to see all buffers
+
+C-x 1 keep only focused buffer 
+C-x 0 kill buffer
+C-x 2 split vertical
+C-x 3 horisontal
+C-tab to change focus from one to another (C-M-v to scroll unfocused buffer)
+
+C-x u undo 
+C-y paste
+M-y clever past from kill ring it remembers a lot of things u copied use tab for autocomplete
+C-w - Ctrl-x cut
+M-w - copy
+
+ 
 * Tab bar mode(workspaces)
 pr - prefix C-x t
 pr 2 - new tab
@@ -108,6 +170,8 @@ This is an icon set that can be used with dashboard, dired, ibuffer and other Em
 (setq imenu-use-popup-menu nil) ;; диалоги Imenu только в минибуфере
 (global-set-key (kbd "<f6>") 'imenu) ;; вызов Imenu на F6
 ;#+end_src
+** Ctrl click to func def 
+
 ** Magit
 #+begin_src emacs-lisp
 (use-package magit)

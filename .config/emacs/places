@@ -1,10 +1,24 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/home/username/ObsidianBack/Org/Python/DeepLearning.org" . 13582)
+(("/home/username/ObsidianBack/Org/Python/DeepLearning.org" . 14398)
+ ("/home/username/Progs/PycharmProjects/CDW/TAGS" . 9082)
+ ("/home/username/Progs/PycharmProjects/CDW/main.py" . 1240)
+ ("/home/username/Progs/PycharmProjects/CDW/src/CDW/game.py" . 446)
+ ("/home/username/Dotfiles/.config/emacs/config.org" . 4465)
+ ("/home/username/PycharmProjects/CDW/main.py" . 1514)
  ("/home/username/.config/"
   (dired-filename . "/home/username/.config/emacs"))
  ("/home/username/.config/emacs/"
   (dired-filename . "/home/username/.config/emacs/config.org"))
- ("/home/username/Dotfiles/.config/emacs/config.org" . 918)
+ ("/home/username/test" . 2)
+ ("/gnu/store/9lsd2kz8valy6qy6fdj0rz57y9wwqp27-emacs-29.1/share/emacs/29.1/lisp/simple.el.gz" . 221775)
+ ("/home/username/PycharmProjects/CDW/"
+  (dired-filename . "/home/username/PycharmProjects/CDW/.."))
+ ("/home/username/PycharmProjects/CDW_ref/"
+  (dired-filename . "/home/username/PycharmProjects/CDW_ref/.."))
+ ("/home/username/PycharmProjects/"
+  (dired-filename . "/home/username/PycharmProjects/.."))
+ ("/home/username/"
+  (dired-filename . "/home/username/.bash_history"))
  ("/home/username/.config/guix/"
   (dired-filename . "/home/username/.config/guix/system.scm"))
  ("/home/username/Dotfiles/.config/guix/system.scm" . 918)
