@@ -29,4 +29,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/username/\x2ecargo/bin\x1e/home/username/\x2elocal/share/flatpak/exports/share\x1e/home/username/pycharm\x2dcommunity\x2d2023\x2e2\x2e4/bin\x1e/var/lib/flatpak/exports/share\x1e/home/username/\x2elocal/bin
+SETUVAR fish_user_paths:/home/username/Dotfiles/\x2econfig/i3\x1e/home/username/\x2ecargo/bin\x1e/home/username/\x2elocal/share/flatpak/exports/share\x1e/home/username/pycharm\x2dcommunity\x2d2023\x2e2\x2e4/bin\x1e/var/lib/flatpak/exports/share\x1e/home/username/\x2elocal/bin
