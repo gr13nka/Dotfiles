@@ -180,7 +180,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     case M_GIT:
         if (record->event.pressed)
-            SEND_STRING("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");
+            SEND_STRING("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");
         else {
             register_code(KC_ENT);
             unregister_code(KC_ENT);
