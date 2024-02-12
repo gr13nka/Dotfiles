@@ -8,7 +8,7 @@ Type=Application
 # The name of the application
 Name=Pycharm
 # The executable of the application, possibly with arguments.
-Exec=pycharm.sh
+Exec=/home/username/pycharm-community-2023.3.3/bin/pycharm.sh
 
 # The name of the icon that will be used to display this entry
 

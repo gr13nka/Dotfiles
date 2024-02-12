@@ -1,6 +1,7 @@
 fish_add_path /home/username/.local/bin
 fish_add_path /var/lib/flatpak/exports/share
 fish_add_path /home/username/pycharm-community-2023.2.4/bin
+fish_add_path /home/username/pycharm-community-2023.3.3/bin
 fish_add_path /home/username/.local/share/flatpak/exports/share
 fish_add_path /home/username/.cargo/bin
 fish_add_path /home/username/Dotfiles/.config/i3
